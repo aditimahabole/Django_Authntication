@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;500;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Hospital - Login</title>
+</head>
+
+<body  style="margin: 20px; font-family: 'Poppins', sans-serif; ">
+    <div class="main container">
+        {% if messages %}
+        <div class="alert alert-primary" role="alert">
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+        </div>
+        {% endif %}
+        <form class="shadow-lg p-5 rounded" method="POST" enctype="multipart/form-data" style=" border-radius:20px;">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <hr>
+            <div class="form-group">
+                <label for="id_username">Username</label>
+                <input type="text" class="form-control" id="id_username" name="username" placeholder="Enter Username" required>
+            </div>
+            <div class="form-group">
+                <label for="id_password">Password</label>
+                <input type="password" class="form-control" id="id_password" name="password" placeholder="Enter Password" required>
+            </div>
+           
+            <p>New user ?  <a href="{% url 'signup' %}">Signup</a></p>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
