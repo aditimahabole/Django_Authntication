@@ -5,4 +5,7 @@
 
 <img width="955" alt="image" src="https://github.com/aditimahabole/hospital_django/assets/78752342/4343403d-4690-4de5-b3dd-0dfcbadd48bc">
 
+<img width="959" alt="image" src="https://github.com/aditimahabole/hospital_django/assets/78752342/72bf6e26-ce47-4467-a3e1-bc90dbf28e8f">
+
+
 
