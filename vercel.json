@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "hospital/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.8",
+          "buildCommand": "pip install -r requirements.txt",
+          "entrypoint": "hospital/wsgi:application"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "hospital/wsgi.py"
+      }
+    ]
+  }
+  
